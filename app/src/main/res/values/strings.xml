@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">project 1</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+
+    <string name="firstBox">
+
+    </string>
+
+    <!-- hardcoded strings for home screen -->
+    <string name="edit">Edit</string>
+
+    <!-- hardcoded strings for class creation-->
+    <string name="AddText">ADD:</string>
+    <string name="ClassNameHint">Class Name</string>
+    <string name="ProfessorHint">Professor</string>
+    <string name="TimeHint">Time</string>
+    <string name="DeleteText">Delete:</string>
+    <string name="EditText">Edit:</string>
+    <string name="SubmitButton">Submit</string>
+
+    <!-- hardcoded strings for assignment creation-->
+    <string name="ClassText">Class:</string>
+    <string name="TitleHint">Title</string>
+    <string name="DateHint">Date</string>
+    <string name="LocationHint">Location</string>
+    <string name="AssignmentButton">Assignment</string>
+    <string name="ExamButton">Exam</string>
+
+    <!-- hardcoded strings for to do list-->
+
+
+    <!-- hardcoded strings for the task bar -->
+    <string name="home">HOME</string>
+    <string name="exams">EXAMS</string>
+    <string name="TODO">TODO</string>
+    <string name="AddAssignments">ADD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

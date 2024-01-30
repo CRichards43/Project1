@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.project1.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_assignmentFrag"
+            app:destination="@id/assignmentFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_examFrag"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_classEditingFrag"
+            app:destination="@id/classEditingFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_self"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_examFrag2"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_assignmentFrag2"
+            app:destination="@id/assignmentFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignmentCreationFrag"
+        android:name="com.example.project1.AssignmentCreationFrag"
+        android:label="AssignmentCreationFrag" >
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_examFrag"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_assignmentFrag"
+            app:destination="@id/assignmentFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignmentFrag"
+        android:name="com.example.project1.AssignmentFrag"
+        android:label="AssignmentFrag" >
+        <action
+            android:id="@+id/action_assignmentFrag_to_assignmentEditingFrag2"
+            app:destination="@id/assignmentEditingFrag2" />
+        <action
+            android:id="@+id/action_assignmentFrag_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_assignmentFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_assignmentFrag_to_examFrag"
+            app:destination="@id/examFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignmentEditingFrag2"
+        android:name="com.example.project1.AssignmentEditingFrag"
+        android:label="AssignmentEditingFrag" >
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_assignmentFrag"
+            app:destination="@id/assignmentFrag" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_examFrag"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/examFrag"
+        android:name="com.example.project1.ExamFrag"
+        android:label="ExamFrag" >
+        <action
+            android:id="@+id/action_examFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_examFrag_self"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_examFrag_self2"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_examFrag_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_examFrag_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_examFrag_self3"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_examFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+        <action
+            android:id="@+id/action_examFrag_to_assignmentCreationFrag2"
+            app:destination="@id/assignmentCreationFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/toDoFrag"
+        android:name="com.example.project1.ToDoFrag"
+        android:label="ToDoFrag" >
+        <action
+            android:id="@+id/action_toDoFrag_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_toDoFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_toDoFrag_to_assignmentEditingFrag2"
+            app:destination="@id/assignmentEditingFrag2" />
+        <action
+            android:id="@+id/action_toDoFrag_to_examFrag"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_toDoFrag_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classEditingFrag"
+        android:name="com.example.project1.ClassEditingFrag"
+        android:label="ClassEditingFrag" >
+        <action
+            android:id="@+id/action_classEditingFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_classEditingFrag_to_examFrag"
+            app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_classEditingFrag_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_classEditingFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+    </fragment>
+</navigation>
