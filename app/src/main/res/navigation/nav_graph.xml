@@ -18,9 +18,6 @@
             android:id="@+id/action_FirstFragment_to_examFrag"
             app:destination="@id/examFrag" />
         <action
-            android:id="@+id/action_FirstFragment_to_classEditingFrag"
-            app:destination="@id/classEditingFrag" />
-        <action
             android:id="@+id/action_FirstFragment_self"
             app:destination="@id/FirstFragment" />
         <action
@@ -32,6 +29,18 @@
         <action
             android:id="@+id/action_FirstFragment_to_assignmentFrag2"
             app:destination="@id/assignmentFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_classCreationFrag"
+            app:destination="@id/classCreationFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_classEditingFrag"
+            app:destination="@id/classEditingFrag" />
+        <action
+            android:id="@+id/action_FirstFragment_to_classListFrag"
+            app:destination="@id/classListFrag" />
     </fragment>
     <fragment
         android:id="@+id/assignmentCreationFrag"
@@ -52,6 +61,12 @@
         <action
             android:id="@+id/action_assignmentCreationFrag_to_assignmentFrag"
             app:destination="@id/assignmentFrag" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_self"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_assignmentCreationFrag_to_assignmentEditingFrag2"
+            app:destination="@id/assignmentEditingFrag2" />
     </fragment>
     <fragment
         android:id="@+id/assignmentFrag"
@@ -69,6 +84,9 @@
         <action
             android:id="@+id/action_assignmentFrag_to_examFrag"
             app:destination="@id/examFrag" />
+        <action
+            android:id="@+id/action_assignmentFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
     </fragment>
     <fragment
         android:id="@+id/assignmentEditingFrag2"
@@ -88,6 +106,12 @@
             app:destination="@id/toDoFrag" />
         <action
             android:id="@+id/action_assignmentEditingFrag2_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_assignmentCreationFrag2"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_assignmentEditingFrag2_to_assignmentCreationFrag3"
             app:destination="@id/assignmentCreationFrag" />
     </fragment>
     <fragment
@@ -138,22 +162,51 @@
         <action
             android:id="@+id/action_toDoFrag_to_FirstFragment2"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_toDoFrag_self"
+            app:destination="@id/toDoFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/classCreationFrag"
+        android:name="com.example.project1.ClassCreationFrag"
+        android:label="ClassCreationFrag" >
+        <action
+            android:id="@+id/action_classCreationFrag_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_classCreationFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
+        <action
+            android:id="@+id/action_classCreationFrag_to_assignmentCreationFrag"
+            app:destination="@id/assignmentCreationFrag" />
+        <action
+            android:id="@+id/action_classCreationFrag_to_examFrag"
+            app:destination="@id/examFrag" />
     </fragment>
     <fragment
         android:id="@+id/classEditingFrag"
         android:name="com.example.project1.ClassEditingFrag"
-        android:label="ClassEditingFrag" >
+        android:label="fragment_class_editing"
+        tools:layout="@layout/fragment_class_editing" >
+        <action
+            android:id="@+id/action_classEditingFrag_to_classCreationFrag"
+            app:destination="@id/classCreationFrag" />
         <action
             android:id="@+id/action_classEditingFrag_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_classEditingFrag_to_toDoFrag"
+            app:destination="@id/toDoFrag" />
         <action
             android:id="@+id/action_classEditingFrag_to_examFrag"
             app:destination="@id/examFrag" />
         <action
             android:id="@+id/action_classEditingFrag_to_assignmentCreationFrag"
             app:destination="@id/assignmentCreationFrag" />
-        <action
-            android:id="@+id/action_classEditingFrag_to_toDoFrag"
-            app:destination="@id/toDoFrag" />
     </fragment>
+    <fragment
+        android:id="@+id/classListFrag"
+        android:name="com.example.project1.ClassListFrag"
+        android:label="fragment_class_list"
+        tools:layout="@layout/fragment_class_list" />
 </navigation>

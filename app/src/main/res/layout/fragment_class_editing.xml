@@ -1,55 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".ClassEditingFrag">
 
-    <EditText
-        android:id="@+id/AddText"
-        android:layout_width="64dp"
+
+    <TextView
+        android:id="@+id/DeleteText"
+        android:layout_width="90dp"
         android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:editable="false"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/AddText"
+        android:text="@string/DeleteText"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/DeleteSpinner"
+        android:layout_width="336dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/EditText"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/EditText"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/EditSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeleteSpinner" />
+
+    <Spinner
+        android:id="@+id/EditSpinner"
+        android:layout_width="338dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeleteSpinner"
+        app:layout_constraintVertical_bias="0.285" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/textInputLayout7"
         android:layout_width="338dp"
         android:layout_height="53dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddText">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/ClassNameHint" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="338dp"
-        android:layout_height="53dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/ProfessorHint" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
@@ -59,29 +78,29 @@
         app:layout_constraintHorizontal_bias="0.5
 "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout7"
         app:startIconTint="#FFFFFF">
-
-
 
         <LinearLayout
             android:id="@+id/timePickerButton"
             android:layout_width="338dp"
-            android:layout_height="53dp" >
+            android:layout_height="53dp">
 
             <Button
-                android:id="@+id/StartTimeBtn"
-                android:layout_width="168dp"
+                android:id="@+id/StartTimeBtn11111"
+                android:layout_width="160dp"
                 android:layout_height="53dp"
                 android:layout_gravity="left"
+                android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:text="Star Time"
                 android:textColor="#000000"
                 android:textColorLink="#FFFFFF"
                 android:textSize="25dp" />
+
             <Button
-                android:id="@+id/EndTimeBtn"
-                android:layout_width="168dp"
+                android:id="@+id/EndTimeBtn1111"
+                android:layout_width="160dp"
                 android:layout_height="53dp"
                 android:layout_gravity="right"
                 android:background="@color/white"
@@ -93,101 +112,109 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/DeleteText"
-        android:layout_width="90dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="@string/DeleteText"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="336dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
-
-    <EditText
-        android:id="@+id/EditText"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="@string/EditText"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="338dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.918" />
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
+        android:id="@+id/textInputLayout15"
         android:layout_width="338dp"
         android:layout_height="53dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias=".493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2">
+        app:layout_constraintTop_toBottomOf="@+id/EditSpinner">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ClassNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/ClassNameHint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="338dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ProfessorInput"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="@string/ProfessorHint" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
         android:layout_width="338dp"
         android:layout_height="53dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+        app:layout_constraintVertical_bias="0.263">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LocationInputForClassEdit"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="@string/TimeHint" />
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/SubmitButton"
-            app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:hint="Location" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="@string/Monday"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEdit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tuesday"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxEdit3"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxEdit"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEdit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/Wednesday"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxEdit4"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEdit4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/Thursday"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxEdit5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEdit5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="@string/Friday"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
 
 
     <LinearLayout
@@ -222,14 +249,33 @@
             android:text="@string/TODO" />
 
         <Button
-            android:id="@+id/AssignmentTab"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/AddAssignments" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/submitButtonForEditClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/SubmitButton"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/AddClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Add Class"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/submitButtonForEditClass" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

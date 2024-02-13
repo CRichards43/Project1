@@ -7,7 +7,7 @@
     tools:context=".ToDoFrag">
 
     <Button
-        android:id="@+id/ToDoEditButton"
+        android:id="@+id/ToDoEditButtonTODO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -29,46 +29,54 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/HomeButton"
+            android:id="@+id/HomeButtonForTODO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/home" />
 
         <Button
-            android:id="@+id/CalendarButton"
+            android:id="@+id/CalendarButtonForTODO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/exams" />
 
         <Button
-            android:id="@+id/TODOButton"
+            android:id="@+id/TODOButtonForTODO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/TODO" />
 
         <Button
-            android:id="@+id/AssignmentTab"
+            android:id="@+id/AssignmentTabForTODO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/AddAssignments" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="338dp"
-        android:layout_height="187dp"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
         android:layout_marginTop="16dp"
-        android:text="ToDo List"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.032" >
+        <LinearLayout
+            android:id="@+id/toDoListHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

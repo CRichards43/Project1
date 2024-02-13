@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".AssignmentCreationFrag">
 
 
-    <EditText
+    <TextView
         android:id="@+id/AddText"
         android:layout_width="61dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/ClassText"
-        android:textSize="16sp"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,10 +30,12 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleInputForAssignCreate"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="@string/TitleHint" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/DateInputLayout"
@@ -44,10 +46,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TitleInputLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <Button
+            android:id="@+id/DatePickingButtonForAssignCreate"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            style="?android:spinnerStyle"
             android:hint="@string/DateHint" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -60,9 +67,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DateInputLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <Button
+            android:id="@+id/TimePickerButtonForAssignmentsCreate"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:textColor="@color/black"
             android:hint="@string/TimeHint" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,9 +83,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/TimeInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LocationInputForAssignCreate"
             android:layout_width="338dp"
             android:layout_height="48dp"
             android:hint="@string/LocationHint" />
@@ -93,28 +104,28 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/HomeButton"
+            android:id="@+id/HomeNavButtonForAssignCreation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/home" />
 
         <Button
-            android:id="@+id/CalendarButton"
+            android:id="@+id/ExamNavButtonForAssignCreation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/exams" />
 
         <Button
-            android:id="@+id/TODOButton"
+            android:id="@+id/TODONavButtonForAssignCreation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/TODO" />
 
         <Button
-            android:id="@+id/AssignmentTab"
+            android:id="@+id/AssignmentNavButtonForAssignCreation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -122,7 +133,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/submitButton"
+        android:id="@+id/submitButtonForAssignCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
@@ -132,11 +143,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/ClassSpinnerAssignCreation11111"
         android:layout_width="305dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -148,21 +159,39 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3">
+        app:layout_constraintTop_toBottomOf="@+id/ClassSpinnerAssignCreation11111">
 
         <RadioButton
-            android:id="@+id/AssignmentButton"
-            android:layout_width="169dp"
+            android:id="@+id/AssignmentRadioButton"
+            android:layout_width="112dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:text="@string/AssignmentButton" />
 
         <RadioButton
-            android:id="@+id/ExamButton"
-            android:layout_width="169dp"
+            android:id="@+id/ExamRadioButton"
+            android:layout_width="112dp"
             android:layout_height="48dp"
             android:text="@string/ExamButton" />
+        <RadioButton
+            android:id="@+id/ToDoRadio"
+            android:layout_width="112dp"
+            android:layout_height="48dp"
+            android:text="@string/TODO"
+            />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/EditAssignmentButtonForAssignCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="36dp"
+        android:text="Edit"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/submitButtonForAssignCreate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

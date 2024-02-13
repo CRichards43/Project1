@@ -15,11 +15,13 @@
 
     <!-- hardcoded strings for class creation-->
     <string name="AddText">ADD:</string>
-    <string name="ClassNameHint">Class Name</string>
+    <string name="ClassNameHint">Class Name (with section)</string>
     <string name="ProfessorHint">Professor</string>
     <string name="TimeHint">Time</string>
     <string name="DeleteText">Delete:</string>
     <string name="EditText">Edit:</string>
+
+
     <string name="SubmitButton">Submit</string>
 
     <!-- hardcoded strings for assignment creation-->
@@ -40,5 +42,25 @@
     <string name="AddAssignments">ADD</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="DaysHint">Days of the Week</string>
+    <string name="Monday">M</string>
+    <string name="Tuesday">T</string>
+    <string name="Wednesday">W</string>
+    <string name="Thursday">R</string>
+    <string name="Friday">F</string>
+
+
+    <string-array name="class_Name_Array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
 
 </resources>

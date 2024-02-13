@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentFirstLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     tools:context=".FirstFragment">
 
     <Button
-        android:id="@+id/EditButton"
+        android:id="@+id/EditClassButtonForHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -18,7 +19,7 @@
 
 
     <Button
-        android:id="@+id/AssignmentButton"
+        android:id="@+id/AssignmentButtonForHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -38,46 +39,69 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/HomeButton"
+            android:id="@+id/HomeButtonForHome1111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/home" />
 
         <Button
-            android:id="@+id/ExamButton"
+            android:id="@+id/ExamButtonForHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/exams" />
 
         <Button
-            android:id="@+id/TODOButton"
+            android:id="@+id/TODOButtonForHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/TODO" />
 
         <Button
-            android:id="@+id/AddButton"
+            android:id="@+id/AddAssignmentButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/AddAssignments" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="385dp"
-        android:layout_height="553dp"
-        android:layout_marginTop="16dp"
-        android:text="All class info will go here"
-        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+
+    <ScrollView
+        android:id="@+id/scrollViewHolder"
+        android:layout_width="403dp"
+        android:layout_height="563dp"
+        android:padding="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ClassLayoutDemo111111111111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.032">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/NewClassButtonForHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="New"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
+        app:layout_constraintEnd_toStartOf="@+id/EditClassButtonForHome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".AssignmentFrag">
 
 
     <Button
         android:id="@+id/EditAssignmentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
         android:text="@string/edit"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
 
     <LinearLayout
         android:id="@+id/bottomButtonContainer"
@@ -29,55 +30,125 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/HomeButton"
+            android:id="@+id/HomeButtonForAssignment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/home" />
 
         <Button
-            android:id="@+id/CalendarButton"
+            android:id="@+id/CalendarButtonForAssignment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/exams" />
 
         <Button
-            android:id="@+id/TODOButton"
+            android:id="@+id/TODOButtonForAssignment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/TODO" />
 
         <Button
-            android:id="@+id/AssignmentTab"
+            android:id="@+id/button4ForAssignment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/AddAssignments" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="337dp"
-        android:layout_height="255dp"
-        android:layout_marginTop="50dp"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="347dp"
+        android:layout_height="429dp"
         android:text="All assignment info will go here"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CompletetionSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
 
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="338dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        <LinearLayout
+            android:id="@+id/assignmentHolderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/filterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Filter By:"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/filterSpinnerForClass11111"
+        android:layout_width="278dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/filterText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="338dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSpinnerForClass11111">
+
+        <RadioButton
+            android:id="@+id/AssignmentRadioButton"
+            android:layout_width="189dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:text="All Assignments" />
+
+
+        <RadioButton
+            android:id="@+id/ImcompleteOnlyButton"
+            android:layout_width="189dp"
+            android:layout_height="25dp"
+            android:text="Incomplete"
+            />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="338dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/furthestOutButton"
+            android:layout_width="189dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:text="Furthest Out" />
+
+
+        <RadioButton
+            android:id="@+id/closestDate"
+            android:layout_width="189dp"
+            android:layout_height="25dp"
+            android:text="Closest Date"
+            />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
